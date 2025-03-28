@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67FF26CE2E4B54830DB17652 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B8016D2542F7C1F062E5A3D /* Object.cpp */; };
+		635B04936869500F2B0649BC /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E1F308171640B214CE636E4 /* imgui.cpp */; };
+		184102261C8915F74B5B5B60 /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78B74FDA093E667260807885 /* imgui_demo.cpp */; };
+		5C037F10282928AA34E47905 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 138F2B192F7A307C276966BC /* imgui_draw.cpp */; };
+		4C9360EF765C1FF46FED3C73 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AB54D81101974715FE3687C /* imgui_tables.cpp */; };
+		20DF1A252E6D1B4C39F66766 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459813F63659354758420BF1 /* imgui_widgets.cpp */; };
+		021A7E923DE0543D04592C12 /* orx-premake4-mix-c++.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76041D62476D74361F96677C /* orx-premake4-mix-c++.cpp */; };
+		6BDD1A496ABD386F19390988 /* pocketpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE71A32A5832D8274B2F9E /* pocketpy.c */; };
+		315A45F1058B1DC311EB6136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A707F7309FC074401EC3646 /* Foundation.framework */; };
+		6AC07C3867C969595C8C0F29 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49996C4F76C45216478C4D43 /* AppKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C2321F64DF93A0059E23FB8 /* premake4.lua */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.lua; name = "premake4.lua"; path = "../../premake4.lua"; sourceTree = "<group>"; };
+		54377E7353A0489610764379 /* orxBundleData.inc */ = {isa = PBXFileReference; lastKnownFileType = text; name = "orxBundleData.inc"; path = "../../../include/orxBundleData.inc"; sourceTree = "<group>"; };
+		750200B926216CD945171B05 /* CreationTemplate.ini */ = {isa = PBXFileReference; lastKnownFileType = text; name = "CreationTemplate.ini"; path = "../../../data/config/CreationTemplate.ini"; sourceTree = "<group>"; };
+		2101688A3CCC3436700308AE /* ExtensionTemplate.ini */ = {isa = PBXFileReference; lastKnownFileType = text; name = "ExtensionTemplate.ini"; path = "../../../data/config/ExtensionTemplate.ini"; sourceTree = "<group>"; };
+		66481F74002E694533552CC1 /* SettingsTemplate.ini */ = {isa = PBXFileReference; lastKnownFileType = text; name = "SettingsTemplate.ini"; path = "../../../data/config/SettingsTemplate.ini"; sourceTree = "<group>"; };
+		456F0A39361940FE1D791DE8 /* orx-premake4-mix-c++.ini */ = {isa = PBXFileReference; lastKnownFileType = text; name = "orx-premake4-mix-c++.ini"; path = "../../../data/config/orx-premake4-mix-c++.ini"; sourceTree = "<group>"; };
+		769477A06ADA15046F9606CF /* orx-premake4-mix-c++d.ini */ = {isa = PBXFileReference; lastKnownFileType = text; name = "orx-premake4-mix-c++d.ini"; path = "../../../data/config/orx-premake4-mix-c++d.ini"; sourceTree = "<group>"; };
+		344F65431FA66E7D68352E7B /* orx-premake4-mix-c++p.ini */ = {isa = PBXFileReference; lastKnownFileType = text; name = "orx-premake4-mix-c++p.ini"; path = "../../../data/config/orx-premake4-mix-c++p.ini"; sourceTree = "<group>"; };
+		591926301ADF500059605F3B /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Object.h"; path = "../../../include/Object.h"; sourceTree = "<group>"; };
+		0B3C38AF796C4C3F6B7A3260 /* Scroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Scroll.h"; path = "../../../include/extensions/Scroll/Scroll.h"; sourceTree = "<group>"; };
+		3D0141D64ACC3A4D4D945C3B /* ScrollBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScrollBase.h"; path = "../../../include/extensions/Scroll/ScrollBase.h"; sourceTree = "<group>"; };
+		39A45052594565100AF246F0 /* ScrollObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScrollObject.h"; path = "../../../include/extensions/Scroll/ScrollObject.h"; sourceTree = "<group>"; };
+		26BA26A11C9C6F806BC10A45 /* imconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "imconfig.h"; path = "../../../include/extensions/imgui/imconfig.h"; sourceTree = "<group>"; };
+		6D7E71AE77B32F823769779C /* imgui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "imgui.h"; path = "../../../include/extensions/imgui/imgui.h"; sourceTree = "<group>"; };
+		33C21405578776436712623C /* imgui_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "imgui_internal.h"; path = "../../../include/extensions/imgui/imgui_internal.h"; sourceTree = "<group>"; };
+		75836D9B5FF57B1D4DA93082 /* imstb_rectpack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "imstb_rectpack.h"; path = "../../../include/extensions/imgui/imstb_rectpack.h"; sourceTree = "<group>"; };
+		2F7B449B40F352C84FE15816 /* imstb_textedit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "imstb_textedit.h"; path = "../../../include/extensions/imgui/imstb_textedit.h"; sourceTree = "<group>"; };
+		460126C562677C7651420181 /* imstb_truetype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "imstb_truetype.h"; path = "../../../include/extensions/imgui/imstb_truetype.h"; sourceTree = "<group>"; };
+		477175BC446841AB5FA37703 /* lz4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lz4.h"; path = "../../../include/extensions/lz4/lz4.h"; sourceTree = "<group>"; };
+		0D1E2F6E0DCF322F43743112 /* lz4hc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lz4hc.h"; path = "../../../include/extensions/lz4/lz4hc.h"; sourceTree = "<group>"; };
+		16CE69F55CC859BD2BBC7404 /* orxBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "orxBundle.h"; path = "../../../include/extensions/orxBundle.h"; sourceTree = "<group>"; };
+		66435C0221D2636249822124 /* orxExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "orxExtensions.h"; path = "../../../include/extensions/orxExtensions.h"; sourceTree = "<group>"; };
+		7C4A5E6958A832EF00084466 /* orxImGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "orxImGui.h"; path = "../../../include/extensions/orxImGui.h"; sourceTree = "<group>"; };
+		38B12942405E79F0053430B1 /* orxInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "orxInspector.h"; path = "../../../include/extensions/orxInspector.h"; sourceTree = "<group>"; };
+		719D7F8E69E15FE3692E7157 /* orxPy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "orxPy.h"; path = "../../../include/extensions/orxPy.h"; sourceTree = "<group>"; };
+		12DD1D2B7EBC6A820F845681 /* pocketpy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pocketpy.h"; path = "../../../include/extensions/pocketpy.h"; sourceTree = "<group>"; };
+		4B390CFD4888150E64411FFB /* orx-premake4-mix-c++.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "orx-premake4-mix-c++.h"; path = "../../../include/orx-premake4-mix-c++.h"; sourceTree = "<group>"; };
+		7B8016D2542F7C1F062E5A3D /* Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Object.cpp"; path = "../../../src/Object.cpp"; sourceTree = "<group>"; };
+		7E1F308171640B214CE636E4 /* imgui.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "imgui.cpp"; path = "../../../src/imgui/imgui.cpp"; sourceTree = "<group>"; };
+		78B74FDA093E667260807885 /* imgui_demo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "imgui_demo.cpp"; path = "../../../src/imgui/imgui_demo.cpp"; sourceTree = "<group>"; };
+		138F2B192F7A307C276966BC /* imgui_draw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "imgui_draw.cpp"; path = "../../../src/imgui/imgui_draw.cpp"; sourceTree = "<group>"; };
+		3AB54D81101974715FE3687C /* imgui_tables.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "imgui_tables.cpp"; path = "../../../src/imgui/imgui_tables.cpp"; sourceTree = "<group>"; };
+		459813F63659354758420BF1 /* imgui_widgets.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "imgui_widgets.cpp"; path = "../../../src/imgui/imgui_widgets.cpp"; sourceTree = "<group>"; };
+		76041D62476D74361F96677C /* orx-premake4-mix-c++.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "orx-premake4-mix-c++.cpp"; path = "../../../src/orx-premake4-mix-c++.cpp"; sourceTree = "<group>"; };
+		7ABE71A32A5832D8274B2F9E /* pocketpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "pocketpy.c"; path = "../../../src/pocketpy.c"; sourceTree = "<group>"; };
+		5A707F7309FC074401EC3646 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "/System/Library/Frameworks/Foundation.framework"; sourceTree = "<absolute>"; };
+		49996C4F76C45216478C4D43 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AppKit.framework"; path = "/System/Library/Frameworks/AppKit.framework"; sourceTree = "<absolute>"; };
+		37980BC6314824090AB25099 /* orx-premake4-mix-c++d */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "orx-premake4-mix-c++d"; path = "orx-premake4-mix-c++d"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66530206790D55A4162D75F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315A45F1058B1DC311EB6136 /* Foundation.framework in Frameworks */,
+				6AC07C3867C969595C8C0F29 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0231158D0B55022D0AB46BBE /* orx-premake4-mix-c++ */ = {
+			isa = PBXGroup;
+			children = (
+				33D44E8440362F70134D4BB8 /* build */,
+				54EF2BE5603A089030F15BDA /* bundle */,
+				41710F390EA648B028B52FD9 /* config */,
+				0DEF7D2E0177506D4B9666EF /* include */,
+				27407CC17ED765CE72FA27BF /* src */,
+				4CC94FA84BBE3B0951C109A7 /* Frameworks */,
+				60C9682F23DB0AF71362210E /* Products */,
+			);
+			name = "orx-premake4-mix-c++";
+			sourceTree = "<group>";
+		};
+		33D44E8440362F70134D4BB8 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				3C2321F64DF93A0059E23FB8 /* premake4.lua */,
+			);
+			name = "build";
+			sourceTree = "<group>";
+		};
+		54EF2BE5603A089030F15BDA /* bundle */ = {
+			isa = PBXGroup;
+			children = (
+				54377E7353A0489610764379 /* orxBundleData.inc */,
+			);
+			name = "bundle";
+			sourceTree = "<group>";
+		};
+		41710F390EA648B028B52FD9 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				750200B926216CD945171B05 /* CreationTemplate.ini */,
+				2101688A3CCC3436700308AE /* ExtensionTemplate.ini */,
+				66481F74002E694533552CC1 /* SettingsTemplate.ini */,
+				456F0A39361940FE1D791DE8 /* orx-premake4-mix-c++.ini */,
+				769477A06ADA15046F9606CF /* orx-premake4-mix-c++d.ini */,
+				344F65431FA66E7D68352E7B /* orx-premake4-mix-c++p.ini */,
+			);
+			name = "config";
+			sourceTree = "<group>";
+		};
+		0DEF7D2E0177506D4B9666EF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				591926301ADF500059605F3B /* Object.h */,
+				4F4B4F94001F037714820053 /* extensions */,
+				4B390CFD4888150E64411FFB /* orx-premake4-mix-c++.h */,
+			);
+			name = "include";
+			sourceTree = "<group>";
+		};
+		4F4B4F94001F037714820053 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AA921DD346A36341B231E78 /* Scroll */,
+				42E030816B081BBA630C3030 /* imgui */,
+				523B415C197C599F57CF1146 /* lz4 */,
+				16CE69F55CC859BD2BBC7404 /* orxBundle.h */,
+				66435C0221D2636249822124 /* orxExtensions.h */,
+				7C4A5E6958A832EF00084466 /* orxImGui.h */,
+				38B12942405E79F0053430B1 /* orxInspector.h */,
+				719D7F8E69E15FE3692E7157 /* orxPy.h */,
+				12DD1D2B7EBC6A820F845681 /* pocketpy.h */,
+			);
+			name = "extensions";
+			sourceTree = "<group>";
+		};
+		7AA921DD346A36341B231E78 /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				0B3C38AF796C4C3F6B7A3260 /* Scroll.h */,
+				3D0141D64ACC3A4D4D945C3B /* ScrollBase.h */,
+				39A45052594565100AF246F0 /* ScrollObject.h */,
+			);
+			name = "Scroll";
+			sourceTree = "<group>";
+		};
+		42E030816B081BBA630C3030 /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				26BA26A11C9C6F806BC10A45 /* imconfig.h */,
+				6D7E71AE77B32F823769779C /* imgui.h */,
+				33C21405578776436712623C /* imgui_internal.h */,
+				75836D9B5FF57B1D4DA93082 /* imstb_rectpack.h */,
+				2F7B449B40F352C84FE15816 /* imstb_textedit.h */,
+				460126C562677C7651420181 /* imstb_truetype.h */,
+			);
+			name = "imgui";
+			sourceTree = "<group>";
+		};
+		523B415C197C599F57CF1146 /* lz4 */ = {
+			isa = PBXGroup;
+			children = (
+				477175BC446841AB5FA37703 /* lz4.h */,
+				0D1E2F6E0DCF322F43743112 /* lz4hc.h */,
+			);
+			name = "lz4";
+			sourceTree = "<group>";
+		};
+		27407CC17ED765CE72FA27BF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7B8016D2542F7C1F062E5A3D /* Object.cpp */,
+				03DD22B71E780CFE362B6552 /* imgui */,
+				76041D62476D74361F96677C /* orx-premake4-mix-c++.cpp */,
+				7ABE71A32A5832D8274B2F9E /* pocketpy.c */,
+			);
+			name = "src";
+			sourceTree = "<group>";
+		};
+		03DD22B71E780CFE362B6552 /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				7E1F308171640B214CE636E4 /* imgui.cpp */,
+				78B74FDA093E667260807885 /* imgui_demo.cpp */,
+				138F2B192F7A307C276966BC /* imgui_draw.cpp */,
+				3AB54D81101974715FE3687C /* imgui_tables.cpp */,
+				459813F63659354758420BF1 /* imgui_widgets.cpp */,
+			);
+			name = "imgui";
+			sourceTree = "<group>";
+		};
+		4CC94FA84BBE3B0951C109A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A707F7309FC074401EC3646 /* Foundation.framework */,
+				49996C4F76C45216478C4D43 /* AppKit.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		60C9682F23DB0AF71362210E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37980BC6314824090AB25099 /* orx-premake4-mix-c++d */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23BD62E9683D1EE4148D6B61 /* orx-premake4-mix-c++ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25AD0BE8607A74CC3B1827CC /* Build configuration list for PBXNativeTarget "orx-premake4-mix-c++" */;
+			buildPhases = (
+				48D94D4C5C2A66815FA16D17 /* Resources */,
+				40C3537C7F0410A00D103C01 /* Sources */,
+				66530206790D55A4162D75F0 /* Frameworks */,
+				9607AE3710C85E8F00CD1376 /* Postbuild */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "orx-premake4-mix-c++";
+			productInstallPath = "$(HOME)/bin";
+			productName = "orx-premake4-mix-c++";
+			productReference = 37980BC6314824090AB25099 /* orx-premake4-mix-c++d */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "orx-premake4-mix-c++" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 0231158D0B55022D0AB46BBE /* orx-premake4-mix-c++ */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23BD62E9683D1EE4148D6B61 /* orx-premake4-mix-c++d */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48D94D4C5C2A66815FA16D17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9607AE3710C85E8F00CD1376 /* Postbuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Postbuild;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -f /Users/hcarty/projects/orx/code/lib/dynamic/liborx*.dylib ../../../bin";
+		};
+/* End PBXShellScriptBuildPhase section */
+/* Begin PBXSourcesBuildPhase section */
+		40C3537C7F0410A00D103C01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FF26CE2E4B54830DB17652 /* Object.cpp in Sources */,
+				635B04936869500F2B0649BC /* imgui.cpp in Sources */,
+				184102261C8915F74B5B5B60 /* imgui_demo.cpp in Sources */,
+				5C037F10282928AA34E47905 /* imgui_draw.cpp in Sources */,
+				4C9360EF765C1FF46FED3C73 /* imgui_tables.cpp in Sources */,
+				20DF1A252E6D1B4C39F66766 /* imgui_widgets.cpp in Sources */,
+				021A7E923DE0543D04592C12 /* orx-premake4-mix-c++.cpp in Sources */,
+				6BDD1A496ABD386F19390988 /* pocketpy.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F5B27B653D96F581AA35CE1 /* Debug 64-bit Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "orx-premake4-mix-c++d";
+			};
+			name = "Debug 64-bit Universal";
+		};
+		6F082D1F6CD12BF42DF740E4 /* Debug Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "orx-premake4-mix-c++d";
+			};
+			name = "Debug Native 64-bit";
+		};
+		0870162442104AE11DE00DEB /* Profile 64-bit Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "orx-premake4-mix-c++p";
+			};
+			name = "Profile 64-bit Universal";
+		};
+		2AC91B981B0F17B658AB03D0 /* Profile Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "orx-premake4-mix-c++p";
+			};
+			name = "Profile Native 64-bit";
+		};
+		0FB73CAC5A0701E22ADF2AAE /* Release 64-bit Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "orx-premake4-mix-c++";
+			};
+			name = "Release 64-bit Universal";
+		};
+		32B6569248704F8670AA361F /* Release Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "orx-premake4-mix-c++";
+			};
+			name = "Release Native 64-bit";
+		};
+		67E0312E65324E57635A3800 /* Bundle 64-bit Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "orx-premake4-mix-c++";
+			};
+			name = "Bundle 64-bit Universal";
+		};
+		2A8307FC61BE369042BE6DA8 /* Bundle Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "orx-premake4-mix-c++";
+			};
+			name = "Bundle Native 64-bit";
+		};
+		41F765804E676A9D16034274 /* Debug 64-bit Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PK_ENABLE_OS=0",
+					"__orxDEBUG__",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../../orx/code/include",
+					"../../../include/extensions/imgui",
+					"../../../include/extensions",
+					"../../../include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../../orx/code/lib/dynamic",
+				);
+				OBJROOT = "obj/Universal64/Debug";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-gdwarf-2",
+					"-Wno-unused-function",
+					"-Wno-write-strings",
+				);
+				OTHER_LDFLAGS = (
+					"-lorxd",
+					"-dead_strip",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = "../../../bin";
+			};
+			name = "Debug 64-bit Universal";
+		};
+		4A094DDC2B5914EC50E172D5 /* Debug Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "x86_64";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PK_ENABLE_OS=0",
+					"__orxDEBUG__",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../../orx/code/include",
+					"../../../include/extensions/imgui",
+					"../../../include/extensions",
+					"../../../include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../../orx/code/lib/dynamic",
+				);
+				OBJROOT = "obj/x64/Debug";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-gdwarf-2",
+					"-Wno-unused-function",
+					"-Wno-write-strings",
+				);
+				OTHER_LDFLAGS = (
+					"-lorxd",
+					"-dead_strip",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = "../../../bin";
+			};
+			name = "Debug Native 64-bit";
+		};
+		5C746C866B925F1225BD2FE6 /* Profile 64-bit Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PK_ENABLE_OS=0",
+					"__orxPROFILER__",
+					"NDEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../../orx/code/include",
+					"../../../include/extensions/imgui",
+					"../../../include/extensions",
+					"../../../include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../../orx/code/lib/dynamic",
+				);
+				OBJROOT = "obj/Universal64/Profile";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-gdwarf-2",
+					"-Wno-unused-function",
+					"-Wno-write-strings",
+				);
+				OTHER_LDFLAGS = (
+					"-lorxp",
+					"-dead_strip",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = "../../../bin";
+			};
+			name = "Profile 64-bit Universal";
+		};
+		78E4666A4A7C4F3B57661CDF /* Profile Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "x86_64";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PK_ENABLE_OS=0",
+					"__orxPROFILER__",
+					"NDEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../../orx/code/include",
+					"../../../include/extensions/imgui",
+					"../../../include/extensions",
+					"../../../include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../../orx/code/lib/dynamic",
+				);
+				OBJROOT = "obj/x64/Profile";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-gdwarf-2",
+					"-Wno-unused-function",
+					"-Wno-write-strings",
+				);
+				OTHER_LDFLAGS = (
+					"-lorxp",
+					"-dead_strip",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = "../../../bin";
+			};
+			name = "Profile Native 64-bit";
+		};
+		39EB15E377A44B0011C86A2B /* Release 64-bit Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PK_ENABLE_OS=0",
+					"NDEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../../orx/code/include",
+					"../../../include/extensions/imgui",
+					"../../../include/extensions",
+					"../../../include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../../orx/code/lib/dynamic",
+				);
+				OBJROOT = "obj/Universal64/Release";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-gdwarf-2",
+					"-Wno-unused-function",
+					"-Wno-write-strings",
+				);
+				OTHER_LDFLAGS = (
+					"-lorx",
+					"-dead_strip",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = "../../../bin";
+			};
+			name = "Release 64-bit Universal";
+		};
+		59F16CB3798800121EF36557 /* Release Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "x86_64";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PK_ENABLE_OS=0",
+					"NDEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../../orx/code/include",
+					"../../../include/extensions/imgui",
+					"../../../include/extensions",
+					"../../../include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../../orx/code/lib/dynamic",
+				);
+				OBJROOT = "obj/x64/Release";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-gdwarf-2",
+					"-Wno-unused-function",
+					"-Wno-write-strings",
+				);
+				OTHER_LDFLAGS = (
+					"-lorx",
+					"-dead_strip",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = "../../../bin";
+			};
+			name = "Release Native 64-bit";
+		};
+		196F74834A1330CB75FF4A4B /* Bundle 64-bit Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PK_ENABLE_OS=0",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../../orx/code/include",
+					"../../../include/extensions/imgui",
+					"../../../include/extensions",
+					"../../../include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../../orx/code/lib/dynamic",
+				);
+				OBJROOT = "obj/Universal64/Bundle";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-gdwarf-2",
+					"-Wno-unused-function",
+					"-Wno-write-strings",
+				);
+				OTHER_LDFLAGS = (
+					"-lorx",
+					"-dead_strip",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = "../../../bin";
+			};
+			name = "Bundle 64-bit Universal";
+		};
+		485E4F116AF65CF15B0736C2 /* Bundle Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "x86_64";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PK_ENABLE_OS=0",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../../../../orx/code/include",
+					"../../../include/extensions/imgui",
+					"../../../include/extensions",
+					"../../../include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../../orx/code/lib/dynamic",
+				);
+				OBJROOT = "obj/x64/Bundle";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-gdwarf-2",
+					"-Wno-unused-function",
+					"-Wno-write-strings",
+				);
+				OTHER_LDFLAGS = (
+					"-lorx",
+					"-dead_strip",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = "../../../bin";
+			};
+			name = "Bundle Native 64-bit";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25AD0BE8607A74CC3B1827CC /* Build configuration list for PBXNativeTarget "orx-premake4-mix-c++d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F5B27B653D96F581AA35CE1 /* Debug 64-bit Universal */,
+				6F082D1F6CD12BF42DF740E4 /* Debug Native 64-bit */,
+				0870162442104AE11DE00DEB /* Profile 64-bit Universal */,
+				2AC91B981B0F17B658AB03D0 /* Profile Native 64-bit */,
+				0FB73CAC5A0701E22ADF2AAE /* Release 64-bit Universal */,
+				32B6569248704F8670AA361F /* Release Native 64-bit */,
+				67E0312E65324E57635A3800 /* Bundle 64-bit Universal */,
+				2A8307FC61BE369042BE6DA8 /* Bundle Native 64-bit */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug 64-bit Universal";
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "orx-premake4-mix-c++" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41F765804E676A9D16034274 /* Debug 64-bit Universal */,
+				4A094DDC2B5914EC50E172D5 /* Debug Native 64-bit */,
+				5C746C866B925F1225BD2FE6 /* Profile 64-bit Universal */,
+				78E4666A4A7C4F3B57661CDF /* Profile Native 64-bit */,
+				39EB15E377A44B0011C86A2B /* Release 64-bit Universal */,
+				59F16CB3798800121EF36557 /* Release Native 64-bit */,
+				196F74834A1330CB75FF4A4B /* Bundle 64-bit Universal */,
+				485E4F116AF65CF15B0736C2 /* Bundle Native 64-bit */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug 64-bit Universal";
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

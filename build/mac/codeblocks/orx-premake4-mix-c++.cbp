@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="orx-premake4-mix-c++" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug|Universal64">
+				<Option output="../../../bin/orx-premake4-mix-c++d" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/Universal64/Debug" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ffast-math" />
+					<Add option="-g" />
+					<Add option="-arch x86_64 -arch arm64" />
+					<Add option="-fno-exceptions" />
+					<Add option="-DPK_ENABLE_OS=0" />
+					<Add option="-D__orxDEBUG__" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-std=c++11" />
+					<Add option="-gdwarf-2" />
+					<Add option="-Wno-unused-function" />
+					<Add option="-Wno-write-strings" />
+					<Add directory="$(ORX)/include" />
+					<Add directory="../../../include/extensions/imgui" />
+					<Add directory="../../../include/extensions" />
+					<Add directory="../../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-arch x86_64 -arch arm64" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-dead_strip" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add directory="$(ORX)/lib/dynamic" />
+					<Add directory="." />
+					<Add library="orxd" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -f $(ORX)/lib/dynamic/liborx*.dylib ../../../bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Profile|Universal64">
+				<Option output="../../../bin/orx-premake4-mix-c++p" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/Universal64/Profile" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ffast-math" />
+					<Add option="-g" />
+					<Add option="-O2" />
+					<Add option="-arch x86_64 -arch arm64" />
+					<Add option="-fno-exceptions" />
+					<Add option="-fno-rtti" />
+					<Add option="-DPK_ENABLE_OS=0" />
+					<Add option="-D__orxPROFILER__" />
+					<Add option="-DNDEBUG" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-std=c++11" />
+					<Add option="-gdwarf-2" />
+					<Add option="-Wno-unused-function" />
+					<Add option="-Wno-write-strings" />
+					<Add directory="$(ORX)/include" />
+					<Add directory="../../../include/extensions/imgui" />
+					<Add directory="../../../include/extensions" />
+					<Add directory="../../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-arch x86_64 -arch arm64" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-dead_strip" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add directory="$(ORX)/lib/dynamic" />
+					<Add directory="." />
+					<Add library="orxp" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -f $(ORX)/lib/dynamic/liborx*.dylib ../../../bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release|Universal64">
+				<Option output="../../../bin/orx-premake4-mix-c++" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/Universal64/Release" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ffast-math" />
+					<Add option="-g" />
+					<Add option="-O2" />
+					<Add option="-arch x86_64 -arch arm64" />
+					<Add option="-fno-exceptions" />
+					<Add option="-fno-rtti" />
+					<Add option="-DPK_ENABLE_OS=0" />
+					<Add option="-DNDEBUG" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-std=c++11" />
+					<Add option="-gdwarf-2" />
+					<Add option="-Wno-unused-function" />
+					<Add option="-Wno-write-strings" />
+					<Add directory="$(ORX)/include" />
+					<Add directory="../../../include/extensions/imgui" />
+					<Add directory="../../../include/extensions" />
+					<Add directory="../../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-arch x86_64 -arch arm64" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-dead_strip" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add directory="$(ORX)/lib/dynamic" />
+					<Add directory="." />
+					<Add library="orx" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -f $(ORX)/lib/dynamic/liborx*.dylib ../../../bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Bundle|Universal64">
+				<Option output="../../../bin/orx-premake4-mix-c++" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/Universal64/Bundle" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ffast-math" />
+					<Add option="-g" />
+					<Add option="-O2" />
+					<Add option="-arch x86_64 -arch arm64" />
+					<Add option="-fno-exceptions" />
+					<Add option="-fno-rtti" />
+					<Add option="-DPK_ENABLE_OS=0" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-std=c++11" />
+					<Add option="-gdwarf-2" />
+					<Add option="-Wno-unused-function" />
+					<Add option="-Wno-write-strings" />
+					<Add directory="$(ORX)/include" />
+					<Add directory="../../../include/extensions/imgui" />
+					<Add directory="../../../include/extensions" />
+					<Add directory="../../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-arch x86_64 -arch arm64" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-dead_strip" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add directory="$(ORX)/lib/dynamic" />
+					<Add directory="." />
+					<Add library="orx" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -f $(ORX)/lib/dynamic/liborx*.dylib ../../../bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug|x64">
+				<Option output="../../../bin/orx-premake4-mix-c++d" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Debug" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ffast-math" />
+					<Add option="-g" />
+					<Add option="-m64" />
+					<Add option="-fno-exceptions" />
+					<Add option="-DPK_ENABLE_OS=0" />
+					<Add option="-D__orxDEBUG__" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-std=c++11" />
+					<Add option="-gdwarf-2" />
+					<Add option="-Wno-unused-function" />
+					<Add option="-Wno-write-strings" />
+					<Add directory="$(ORX)/include" />
+					<Add directory="../../../include/extensions/imgui" />
+					<Add directory="../../../include/extensions" />
+					<Add directory="../../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-dead_strip" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add directory="$(ORX)/lib/dynamic" />
+					<Add directory="." />
+					<Add library="orxd" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -f $(ORX)/lib/dynamic/liborx*.dylib ../../../bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Profile|x64">
+				<Option output="../../../bin/orx-premake4-mix-c++p" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Profile" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ffast-math" />
+					<Add option="-g" />
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-fno-exceptions" />
+					<Add option="-fno-rtti" />
+					<Add option="-DPK_ENABLE_OS=0" />
+					<Add option="-D__orxPROFILER__" />
+					<Add option="-DNDEBUG" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-std=c++11" />
+					<Add option="-gdwarf-2" />
+					<Add option="-Wno-unused-function" />
+					<Add option="-Wno-write-strings" />
+					<Add directory="$(ORX)/include" />
+					<Add directory="../../../include/extensions/imgui" />
+					<Add directory="../../../include/extensions" />
+					<Add directory="../../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-dead_strip" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add directory="$(ORX)/lib/dynamic" />
+					<Add directory="." />
+					<Add library="orxp" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -f $(ORX)/lib/dynamic/liborx*.dylib ../../../bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release|x64">
+				<Option output="../../../bin/orx-premake4-mix-c++" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Release" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ffast-math" />
+					<Add option="-g" />
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-fno-exceptions" />
+					<Add option="-fno-rtti" />
+					<Add option="-DPK_ENABLE_OS=0" />
+					<Add option="-DNDEBUG" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-std=c++11" />
+					<Add option="-gdwarf-2" />
+					<Add option="-Wno-unused-function" />
+					<Add option="-Wno-write-strings" />
+					<Add directory="$(ORX)/include" />
+					<Add directory="../../../include/extensions/imgui" />
+					<Add directory="../../../include/extensions" />
+					<Add directory="../../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-dead_strip" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add directory="$(ORX)/lib/dynamic" />
+					<Add directory="." />
+					<Add library="orx" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -f $(ORX)/lib/dynamic/liborx*.dylib ../../../bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Bundle|x64">
+				<Option output="../../../bin/orx-premake4-mix-c++" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Bundle" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ffast-math" />
+					<Add option="-g" />
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-fno-exceptions" />
+					<Add option="-fno-rtti" />
+					<Add option="-DPK_ENABLE_OS=0" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-std=c++11" />
+					<Add option="-gdwarf-2" />
+					<Add option="-Wno-unused-function" />
+					<Add option="-Wno-write-strings" />
+					<Add directory="$(ORX)/include" />
+					<Add directory="../../../include/extensions/imgui" />
+					<Add directory="../../../include/extensions" />
+					<Add directory="../../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+					<Add option="-stdlib=libc++" />
+					<Add option="-dead_strip" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add directory="$(ORX)/lib/dynamic" />
+					<Add directory="." />
+					<Add library="orx" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -f $(ORX)/lib/dynamic/liborx*.dylib ../../../bin" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Unit filename="../../../src/Object.cpp">
+			<Option virtualFolder="src" />
+		</Unit>
+		<Unit filename="../../../src/orx-premake4-mix-c++.cpp">
+			<Option virtualFolder="src" />
+		</Unit>
+		<Unit filename="../../../src/imgui/imgui_widgets.cpp">
+			<Option virtualFolder="src/imgui" />
+		</Unit>
+		<Unit filename="../../../src/imgui/imgui.cpp">
+			<Option virtualFolder="src/imgui" />
+		</Unit>
+		<Unit filename="../../../src/imgui/imgui_tables.cpp">
+			<Option virtualFolder="src/imgui" />
+		</Unit>
+		<Unit filename="../../../src/imgui/imgui_demo.cpp">
+			<Option virtualFolder="src/imgui" />
+		</Unit>
+		<Unit filename="../../../src/imgui/imgui_draw.cpp">
+			<Option virtualFolder="src/imgui" />
+		</Unit>
+		<Unit filename="../../../src/pocketpy.c">
+			<Option virtualFolder="src" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../../include/orx-premake4-mix-c++.h">
+			<Option virtualFolder="include" />
+		</Unit>
+		<Unit filename="../../../include/Object.h">
+			<Option virtualFolder="include" />
+		</Unit>
+		<Unit filename="../../../include/extensions/orxPy.h">
+			<Option virtualFolder="include/extensions" />
+		</Unit>
+		<Unit filename="../../../include/extensions/orxExtensions.h">
+			<Option virtualFolder="include/extensions" />
+		</Unit>
+		<Unit filename="../../../include/extensions/orxImGui.h">
+			<Option virtualFolder="include/extensions" />
+		</Unit>
+		<Unit filename="../../../include/extensions/orxInspector.h">
+			<Option virtualFolder="include/extensions" />
+		</Unit>
+		<Unit filename="../../../include/extensions/orxBundle.h">
+			<Option virtualFolder="include/extensions" />
+		</Unit>
+		<Unit filename="../../../include/extensions/pocketpy.h">
+			<Option virtualFolder="include/extensions" />
+		</Unit>
+		<Unit filename="../../../include/extensions/Scroll/Scroll.h">
+			<Option virtualFolder="include/extensions/Scroll" />
+		</Unit>
+		<Unit filename="../../../include/extensions/Scroll/ScrollObject.h">
+			<Option virtualFolder="include/extensions/Scroll" />
+		</Unit>
+		<Unit filename="../../../include/extensions/Scroll/ScrollBase.h">
+			<Option virtualFolder="include/extensions/Scroll" />
+		</Unit>
+		<Unit filename="../../../include/extensions/imgui/imgui.h">
+			<Option virtualFolder="include/extensions/imgui" />
+		</Unit>
+		<Unit filename="../../../include/extensions/imgui/imstb_textedit.h">
+			<Option virtualFolder="include/extensions/imgui" />
+		</Unit>
+		<Unit filename="../../../include/extensions/imgui/imconfig.h">
+			<Option virtualFolder="include/extensions/imgui" />
+		</Unit>
+		<Unit filename="../../../include/extensions/imgui/imstb_truetype.h">
+			<Option virtualFolder="include/extensions/imgui" />
+		</Unit>
+		<Unit filename="../../../include/extensions/imgui/imgui_internal.h">
+			<Option virtualFolder="include/extensions/imgui" />
+		</Unit>
+		<Unit filename="../../../include/extensions/imgui/imstb_rectpack.h">
+			<Option virtualFolder="include/extensions/imgui" />
+		</Unit>
+		<Unit filename="../../../include/extensions/lz4/lz4.h">
+			<Option virtualFolder="include/extensions/lz4" />
+		</Unit>
+		<Unit filename="../../../include/extensions/lz4/lz4hc.h">
+			<Option virtualFolder="include/extensions/lz4" />
+		</Unit>
+		<Unit filename="../../../include/orxBundleData.inc">
+			<Option virtualFolder="bundle" />
+		</Unit>
+		<Unit filename="../../premake4.lua">
+			<Option virtualFolder="build" />
+		</Unit>
+		<Unit filename="../../../data/config/CreationTemplate.ini">
+			<Option virtualFolder="config" />
+		</Unit>
+		<Unit filename="../../../data/config/ExtensionTemplate.ini">
+			<Option virtualFolder="config" />
+		</Unit>
+		<Unit filename="../../../data/config/orx-premake4-mix-c++.ini">
+			<Option virtualFolder="config" />
+		</Unit>
+		<Unit filename="../../../data/config/SettingsTemplate.ini">
+			<Option virtualFolder="config" />
+		</Unit>
+		<Unit filename="../../../data/config/orx-premake4-mix-c++d.ini">
+			<Option virtualFolder="config" />
+		</Unit>
+		<Unit filename="../../../data/config/orx-premake4-mix-c++p.ini">
+			<Option virtualFolder="config" />
+		</Unit>
+		<Extensions>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
+

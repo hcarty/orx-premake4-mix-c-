@@ -1,0 +1,197 @@
+{
+  "version": "2.0.0",
+  "presentation": {
+    "reveal": "always",
+    "revealProblems": "onProblem"
+  },
+  "type": "shell",
+  "linux": {
+    "options": {
+      "cwd": "build/linux/gmake/",
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}/build/linux/gmake/"
+        ]
+      }
+    }
+  },
+  "osx": {
+    "options": {
+      "cwd": "build/mac/gmake/",
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}/build/mac/gmake/"
+        ]
+      }
+    }
+  },
+  "windows": {
+    "options": {
+      "cwd": "build/windows/gmake/",
+      "shell": {
+        "executable": "cmd.exe",
+        "args": [
+          "/d",
+          "/c"
+        ]
+      },
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}/build/windows/gmake/"
+        ]
+      }
+    }
+  },
+  "tasks": [
+    {
+      "label": "Refresh orx-premake4-mix-c++ project files",
+      "group": "build",
+      "type": "shell",
+      "command": "./premake4",
+      "windows": {
+        "command": "premake4.exe gmake"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/build/"
+      }
+    },
+    {
+      "label": "Build orx-premake4-mix-c++ (debug, profile, release)",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Build orx-premake4-mix-c++ (debug)",
+        "Build orx-premake4-mix-c++ (profile)",
+        "Build orx-premake4-mix-c++ (release)"
+      ],
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Build orx-premake4-mix-c++ (debug)",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "linux": {
+        "command": "make -j config=debug64",
+      },
+      "osx": {
+        "command": "make -j config=debuguniv64"
+      },
+      "windows": {
+        "command": "mingw32-make.exe -j config=debug64"
+      }
+    },
+    {
+      "label": "Build orx-premake4-mix-c++ (profile)",
+      "group": "build",
+      "type": "shell",
+      "linux": {
+        "command": "make -j config=profile64"
+      },
+      "osx": {
+        "command": "make -j config=profileuniv64"
+      },
+      "windows": {
+        "command": "mingw32-make.exe -j config=profile64"
+      }
+    },
+    {
+      "label": "Build orx-premake4-mix-c++ (release)",
+      "group": "build",
+      "type": "shell",
+      "linux": {
+        "command": "make -j config=release64"
+      },
+      "osx": {
+        "command": "make -j config=releaseuniv64"
+      },
+      "windows": {
+        "command": "mingw32-make.exe -j config=release64"
+      }
+    },
+    {
+      "label": "Build orx-premake4-mix-c++ (web)",
+      "dependsOn": [
+        "Build orx-premake4-mix-c++ (release)"
+      ],
+      "group": "build",
+      "type": "shell",
+      "command": "emmake make -j config=releaseweb",
+    },
+    {
+      "label": "Run orx-premake4-mix-c++ (debug)",
+      "dependsOn": [
+        "Build orx-premake4-mix-c++ (debug)"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "type": "process",
+      "command": "orx-premake4-mix-c++d",
+      "windows": {
+        "command": "orx-premake4-mix-c++d.exe"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/bin/"
+      }
+    },
+    {
+      "label": "Run orx-premake4-mix-c++ (profile)",
+      "dependsOn": [
+        "Build orx-premake4-mix-c++ (profile)"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "type": "process",
+      "command": "orx-premake4-mix-c++p",
+      "windows": {
+        "command": "orx-premake4-mix-c++p.exe"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/bin/"
+      }
+    },
+    {
+      "label": "Run orx-premake4-mix-c++ (release)",
+      "dependsOn": [
+        "Build orx-premake4-mix-c++ (release)"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "type": "process",
+      "command": "orx-premake4-mix-c++",
+      "windows": {
+        "command": "orx-premake4-mix-c++.exe"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/bin/"
+      }
+    },
+    {
+      "label": "Run orx-premake4-mix-c++ (web)",
+      "dependsOn": [
+        "Build orx-premake4-mix-c++ (web)"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "type": "shell",
+      "command": "emrun orx-premake4-mix-c++.html",
+      "options": {
+        "cwd": "${workspaceFolder}/bin/web/"
+      }
+    }
+  ]
+}
