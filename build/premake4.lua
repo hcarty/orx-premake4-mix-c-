@@ -112,7 +112,8 @@ solution "orx-premake4-mix-c++"
 
     defines
     {
-        "PK_ENABLE_OS=0"
+        "PK_ENABLE_OS=0",
+        "__circle__=1"
     }
 
     configuration {"not web"}
